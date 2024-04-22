@@ -1,0 +1,17 @@
+---
+- name: Setup Slave
+  hosts: all
+  remote_user: vagrant
+
+  tasks:
+  - name: Running script
+    become: true
+    script: /vagrant/Sallybash.sh
+  - name: Cron Job
+    ansible.builtin.cron:
+      name: "Log Uptime"
+      state: present
+      minute: "0"
+      hour: "0"
+      job: "uptime >> /var/log/uptime.log"
+~                                            
