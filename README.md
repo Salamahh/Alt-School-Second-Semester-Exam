@@ -13,8 +13,8 @@ Execute the playbook for Ansible:
 then run ansible-playbook -i host-inventory sally.yml --check
 then run ansible-playbook -i host-inventory sally.yml 
 
-# Required Structure of the Repository
+#  Structure of the Repository
 Vagrantfile: Specifies how virtual machines should be provisioned.
-playbook.yaml: Ansible playbook to copy and run the bash script on the slave node. deploy.sh: Bash script to deploy the LAMP stack.
-docs/: Has instructions and screen grabs evidence of the accessibility of the app
+playbook.yml: Ansible playbook to copy and run the bash script on the slave node. deploy.sh: Bash script to deploy the LAMP stack.
 README.md this particular file.
+Sallybash.sh: The bashscript used to deployed the LAMP Stack
